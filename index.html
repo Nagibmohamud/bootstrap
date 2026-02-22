@@ -1,7 +1,8 @@
 <!doctype html>
 <html lang="en">
+
   <head>
-    <title>Bootstrap Example</title>
+    <title>Jaakko Virtanen Portfolio</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
@@ -10,15 +11,148 @@
     />
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </head>
+
   <body>
-    <div class="container">
-      <h1>My First Bootstrap Page</h1>
-      <p>This part is inside a .container class.</p>
-      <p>The .container class provides a responsive fixed width container.</p>
-      <p>
-        Resize the browser window to see that the container width will change at
-        different breakpoints.
-      </p>
+ 
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand fw-bold" href="index.html">Jaakko</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarMenu">
+          <ul class="navbar-nav">
+            <li class="nav-item"> <a class="nav-link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    </nav>
+    <div class="bg-dark text-white py-5" id="about">
+    <div class="container my-5" id="about">
+      <h1 class="text-warning">Hi, I'm Jaakko Virtanen</h1>
+      <p class="lead text-info">IT Student,  Developer,  Problem Solver</p>
+      <p>Second year IT student based in Helsinki, passionate about web development, networking, and building things that actually work.</p>
+      </div>
+    </div>
+
+    <!-- Carousel -->
+    <div id="demoCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button
+          type="button"
+          data-bs-target="#demoCarousel"
+          data-bs-slide-to="0"
+          class="active"
+        ></button>
+
+        <button
+          type="button"
+          data-bs-target="#demoCarousel"
+          data-bs-slide-to="1"
+        ></button>
+        
+      </div>
+
+      <!-- images -->
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img
+            src="franz.jpg"
+            alt="Man coding"
+            class="d-block"
+            style="width: 100%"
+          />
+        </div>
+        <div class="carousel-item">
+          <img
+            src="coding.jpg"
+            alt="Laptop with code"
+            class="d-block"
+            style="width: 100%"   
+          />
+        </div>
+      </div>
+        
+
+      <!-- controls-->
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#demoCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#demoCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+        <!-- Grid -->
+    </div class="container my-3">
+    <h2>My Skills</h2>
+      <div class="row">
+        <div class="col p-3 bg-primary text-white">Frontend</div>
+        <div class="col p-3 bg-dark text-white">Backend</div>
+        <div class="col p-3 bg-primary text-white">Database</div>
+      </div>
+    </div>
+
+<!-- Collapse -->
+  <div class="container mt-3">
+    <h2>About me</h2>
+    <p>Click on the button to see more information about me!</p>
+    <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#demo">Simple collapsible</button>
+    
+      <div id="demo" class="collapse">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+      </div>
+</div>
+
+<!-- Table -->
+<div class="container mt-3">
+  <h2>My Contact Information</h2>          
+  <table class="table table-dark table-hover">
+    <thead>
+      <tr>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jaakko</td>
+        <td>Virtanen</td>
+        <td>jaakko@gmail.com</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Contact me card -->
+ <div class="container mt-4 mb-5" id="contact">
+      <h2>Contact me!</h2>
+      <div class="card" style="width:400px">
+        <div class="card-body">
+          <h4 class="card-title">Jaakko Virtanen</h4>
+          <p class="card-text">IT Student, Helsinki</p>
+          <p class="card-text">
+             jaakko@gmail.com<br/>
+             github.com/jaakko<br/>
+             linkedin.com/jaakko
+          </p>
+        </div>
+        <button class="btn btn-primary" onclick="window.location.href='contact.html'">Contact me</button>
+      </div>
     </div>
   </body>
 </html>
